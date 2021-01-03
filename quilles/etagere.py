@@ -1,8 +1,6 @@
 from turtle import *
 from random import *
-def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombrederayon=6):
-
-
+def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombrederayon=6,nombredelivre=15,proportion=1):
 
     up()
     goto(x,y)
@@ -13,7 +11,8 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     hdf=hauteurdesfondation
     hde=hauteurdunetage
     nbr=nombrederayon
-    
+    nbl=nombredelivre
+    pro=proportion
 
     tracer(0)
 
@@ -29,7 +28,7 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     pencolor('#6e8895')
 
     
-
+    #Base de l'étagère
     fillcolor('#809caa')
     begin_fill()
     for k in range (4):
@@ -92,17 +91,15 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
 
     for z in range(nbr):
         a,z=pos()
-        fillcolor('#ebece6')
-        begin_fill()
         for m in range(2):
-
+            
+            up()
             forward(t*280*l)
             right(90)
             forward(t*10*hde)
             right(90)
+            down()
             
-
-        end_fill()
         up()
         right(90)
         forward(t*10*hde)
@@ -122,7 +119,7 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
         forward(20*t*hde)
         left(90)
         down()
-        forward(254*l*t)
+        forward(254*pro*l*t)
         left(50)
         forward(25*t*hde)
         backward(25*t*hde)
@@ -164,6 +161,37 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     left(90)
     backward(5*l*t)
     down()
+
+    to,ny=pos()
+
+    up()
+    forward(5*t*l)
+    down()
+
+    fillcolor('#cacba0')
+    begin_fill()
+    right(90)
+    forward(t*nbr*hde*60)
+    left(90)
+    forward(270*t*l)
+    left(90)
+    forward(t*nbr*hde*60)
+    left(90)
+    forward(7*t)
+    left(90)
+    forward(t*nbr*hde*60-7*t)
+    right(90)
+    forward(270*t*l-14*t)
+    right(90)
+    forward(t*nbr*hde*60-7*t)
+    left(90)
+    forward(7*t)
+    end_fill()
+    left(180)
+    
+
+    up()
+    goto(to,ny)
     
     p,s=pos()
     up()
@@ -173,14 +201,16 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     down()
     for g in range(2):
         a,y=pos()
+        maxx=0
         
-        for i in range(int(15*l)):
+        while maxx<(240*l*t):
             pencolor('black')
+            
             e,r=pos()
             fillcolor(randint(0,255)/255,randint(0,255)/255,randint(0,255)/255)
             ep=randint(6,15)
             hdl=randint(30,45)
-            saut=[1,1,2]
+            saut=[1,1,2,2,1,3,4,3]
             st=choice(saut)
             
             begin_fill()
@@ -228,6 +258,7 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
             forward(st*ep*t)
             down()
             left(90)
+            maxx+=ep*t*st
                 
         
         up()
@@ -242,11 +273,14 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     
     for z in range(nbr):
         a,z=pos()
+        up()
+        forward(3*t*l)
+        down()
         fillcolor('#ebece6')
         begin_fill()
         for m in range(2):
 
-            forward(t*280*l)
+            forward(t*270*l+5*t)
             right(90)
             forward(t*10*hde)
             right(90)
@@ -275,4 +309,4 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     
     update()
 
-etagere(1,0,0)
+etagere(1,0,0,1.6,1,1,6,13,1)
