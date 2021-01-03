@@ -3,7 +3,7 @@ def pates(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/6
 
     tracer(0)
 
@@ -210,6 +210,3 @@ def pates(taille,x,y,angle=0):
     
     
     update()
-
-
-pates(0.5,0,0)

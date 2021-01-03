@@ -1,13 +1,9 @@
-from turtle import *
+from setup import *
 
-def wumpus(taille,x,y):
+def wumpus(taille,x,y,angle=0):
     
-    up()
-    goto(x,y)
-    down()
-
-
-    t=taille
+    setup(x,y,angle)
+    t=taille/8
 
     tracer(0)
 
@@ -249,7 +245,3 @@ def wumpus(taille,x,y):
 
     
     update()
-
-wumpus(0.5,0,0)
-
-input('')

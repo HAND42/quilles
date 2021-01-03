@@ -2,7 +2,7 @@ from setup import *
 
 def tournevis (taille,x,y,angle=0):
     
-    t=taille
+    t=taille/8
 
     setup(x,y,angle)
 
@@ -15,6 +15,8 @@ def tournevis (taille,x,y,angle=0):
     forward(t*9)
     right(90)
     down()
+
+    right(10)
 
     fillcolor('#9bd9e5')
     for i in range(2):
@@ -99,7 +101,3 @@ def tournevis (taille,x,y,angle=0):
     end_fill()
 
     update()
-    
-tournevis(1,0,0)
-
-input('')

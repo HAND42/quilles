@@ -30,4 +30,3 @@ def troissept(taille,grosseur):
 
     update()
 
-troissept(10,5)

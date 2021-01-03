@@ -3,7 +3,7 @@ def couteau(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/10
 
     tracer(0)
 
@@ -176,6 +176,3 @@ def couteau(taille,x,y,angle=0):
 
     
     update()
-
-couteau(0.5,0,0)
-

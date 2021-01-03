@@ -3,7 +3,7 @@ def coca(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/9
 
     tracer(0)
 
@@ -185,12 +185,6 @@ def coca(taille,x,y,angle=0):
     circle(t*15,180)
     forward(t*50)
     end_fill()
-
-    
-    
+   
     update()
 
-
-coca(0.5,0,0)
-
-input('')

@@ -2,14 +2,12 @@ from turtle import *
 from ovale import ovalerelatif
 from troudé import trou
 def undé(taille,x,y):
-    #setup(900,700)
-
-
+    
     up()
     goto(x,y)
     down()
 
-    t=taille
+    t=taille/10
 
     tracer(0)
 
@@ -65,7 +63,7 @@ def undé(taille,x,y):
     circle(t*40,80)
     right(15)
     for i in range(154):
-        width(t*3.2+0.02*i)
+        width(t*(3.2+0.02*i))
         forward(t*1)
     
     circle(t*45,55)
@@ -73,7 +71,7 @@ def undé(taille,x,y):
     forward(t*210)
     circle(t*20,74)
     for i in range(239):
-        width(t*6.08-0.01*i)
+        width(t*(6.08-0.01*i))
         forward(t*1)
     width(3*t)
     circle(t*50,60)
@@ -99,7 +97,7 @@ def undé(taille,x,y):
         left(angle[i])
         (a,b)=pos()
         for j in range(trait[i]):
-            width(10*t-0.03*j)
+            width(t*(10-0.03*j))
             forward(t*1)
         goto(a,b)
         
@@ -121,7 +119,7 @@ def undé(taille,x,y):
     r,c=pos()
     circle(t*-100,14)
     for i in range (210):
-        width(8*t-0.035*i)
+        width(t*(8-0.035*i))
         forward(t*1)
     
     circle(t*-20,85)
@@ -139,7 +137,7 @@ def undé(taille,x,y):
     width(6*t)
     circle(t*-10,95)
     for i in range (260):
-        width(6*t-0.015*i)
+        width(t*(6-0.015*i))
         forward(t*1)
 
     end_fill()
@@ -210,7 +208,7 @@ def undé(taille,x,y):
     left(120)
     forward(t*170)
     down()
-    trou(0,int(0.95*t))
+    trou(0,0.95*t)
 
     up()
     left(38)
@@ -224,7 +222,3 @@ def undé(taille,x,y):
     down()
     trou(0,0.95*t)
     update()
-
-undé(0.5,0,0)
-
-input('')

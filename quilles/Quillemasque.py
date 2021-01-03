@@ -3,11 +3,11 @@ def masque(taille,x,y,angle=0):
 
     setup(x,y,angle)
     
-    t=taille
+    t=taille/6
 
     tracer(0)
 
-    width(t*2*t)
+    width(2*t)
     pencolor('black')
     fillcolor('#c5e2f3')
     
@@ -34,22 +34,22 @@ def masque(taille,x,y,angle=0):
     right(90)
     forward(t*30)
     right(25)
-    u,i=pos()
+    u,n=pos()
     down()
 
     #Pli de masque
     for i in range (20):
-        width(t*2+0.1*i)
+        width(t*(2+0.1*i))
         circle(t*350,1)
 
     left(6)
 
     for i in range(20):
-        width(t*4-0.1*i)
+        width(t*(4-0.1*i))
         circle(t*350,1)
 
     up()
-    goto(u,i)
+    goto(u,n)
     right(120)
     forward(t*15)
     left(75)
@@ -57,30 +57,30 @@ def masque(taille,x,y,angle=0):
     
 
     for i in range (20):
-        width(t*2+0.1*i)
+        width(t*(2+0.1*i))
         circle(t*350,1)
 
     left(6)
 
     for i in range(20):
-        width(t*4-0.1*i)
+        width(t*(4-0.1*i))
         circle(t*350,1)
 
     up()
-    goto(u,i)
+    goto(u,n)
     right(120)
     forward(t*55)
     left(73)
     down()
 
     for i in range (20):
-        width(t*2+0.1*i)
+        width(t*(2+0.1*i))
         circle(t*350,1)
 
     left(6)
 
     for i in range(20):
-        width(t*4-0.1*i)
+        width(t*(4-0.1*i))
         circle(t*350,1)
 
     up()
@@ -138,8 +138,6 @@ def masque(taille,x,y,angle=0):
     forward(t*32)
     right(82)
     forward(t*20)
-    end_fill()"""
+    end_fill()
 
     update()
-
-masque(1,0,0)

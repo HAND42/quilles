@@ -4,7 +4,7 @@ def chat(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/11
 
     tracer(0)
 
@@ -453,7 +453,5 @@ def chat(taille,x,y,angle=0):
     circle(t*30,30)
     
     update()
-
-chat(0.5,0,0)
 
 

@@ -3,7 +3,7 @@ def bonbon(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/8
     width(3*t)
 
     tracer(0)
@@ -106,10 +106,5 @@ def bonbon(taille,x,y,angle=0):
         circle(t*150,90)
         down()
 
-    
-
     update()
-    
-bonbon(0.5,0,0)
 
-input('')

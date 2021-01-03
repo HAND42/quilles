@@ -3,7 +3,7 @@ def chaussette(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/4
 
     tracer(0)
 
@@ -76,6 +76,5 @@ def chaussette(taille,x,y,angle=0):
 
     update()
 
-chaussette(1,0,0)
 
 

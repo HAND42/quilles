@@ -2,7 +2,7 @@ from setup import *
 
 def PQ (taille,x,y,angle=0):
 
-    t=taille
+    t=taille/12
 
     setup(x,y,angle)
 
@@ -13,8 +13,8 @@ def PQ (taille,x,y,angle=0):
     down()
     
     tracer(0)
+    left(75)
 
-    left(225)
     width(2*t)
 
 
@@ -142,6 +142,3 @@ def PQ (taille,x,y,angle=0):
     right(75)
     forward(70*t)
     update()
-
-PQ(0.5,0,0)
-    

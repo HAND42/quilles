@@ -6,7 +6,7 @@ def Calculette(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/8
 
     tracer(0)
 
@@ -200,4 +200,4 @@ def Calculette(taille,x,y,angle=0):
     
     update()
     
-Calculette(0.5,0,0)
+

@@ -5,7 +5,8 @@ def baguette(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/10
+    
 
     tracer(0)
 
@@ -158,7 +159,3 @@ def baguette(taille,x,y,angle=0):
     ht()
 
     update()
-
-
-baguette(1,0,0)
-

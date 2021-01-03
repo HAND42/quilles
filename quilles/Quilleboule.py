@@ -3,7 +3,7 @@ def boule(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/7
 
     tracer(0)
 
@@ -38,5 +38,3 @@ def boule(taille,x,y,angle=0):
     write('8', font=("Arial",int(90*t), "normal"))
 
     update()
-
-boule(0.5,0,0)

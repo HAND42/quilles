@@ -6,7 +6,7 @@ def Livrets(taille,x,y,angle=0,texte=0,couleur='red'):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/7
     width(3*t)
 
     tracer(0)
@@ -95,7 +95,6 @@ def Livrets(taille,x,y,angle=0,texte=0,couleur='red'):
     down()
     troissept(30*t,5*t)
     
-    
     update()
 
-Livrets(1,0,0)
+    ht()

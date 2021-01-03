@@ -3,7 +3,7 @@ def pokeball(taille,x,y,angle=0):
     
     setup(x,y,angle)
     
-    t=taille
+    t=taille/8
 
 
     tracer(0)
@@ -65,4 +65,4 @@ def pokeball(taille,x,y,angle=0):
 
     update()
 
-pokeball(0.5,0,0)
+

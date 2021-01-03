@@ -4,7 +4,7 @@ def cafe(taille,x,y,angle=0):
 
     setup(x,y,angle)
 
-    t=taille
+    t=taille/8
 
     tracer(0)
     
@@ -143,11 +143,9 @@ def cafe(taille,x,y,angle=0):
     circle(t*-80,25)
     circle(t*-40,240)
     circle(t*-17,200)
-    
-
-    
 
     update()
 
-cafe(0.5,0,0)
+cafe(1,0,0)
 
+input('')

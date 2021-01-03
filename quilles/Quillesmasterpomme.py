@@ -3,7 +3,7 @@ def MasterPomme(taille,x,y,angle=0):
 
     setup(x,y,angle)
     
-    t=taille
+    t=taille/8
     
     tracer(0)
     
@@ -140,7 +140,6 @@ def MasterPomme(taille,x,y,angle=0):
     goto(600,600)
     update()
 
-MasterPomme(1,0,0)
 
 
 
