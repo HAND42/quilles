@@ -1,12 +1,12 @@
 from turtle import *
-def setup(x,y,angle):
+def setup(x,y,angle,tortue):
 
 
-    setheading(angle)
+    tortue.setheading(angle)
 
 
-    up()
-    goto(x,y)
-    down()
+    tortue.up()
+    tortue.goto(x,y)
+    tortue.down()
 
     tracer(0)

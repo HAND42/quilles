@@ -17,10 +17,10 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     tracer(0)
 
     up()
-    backward(t*150)
+    backward(t*137*l)
     
     right(90)
-    forward(t*160)
+    forward(t*180*hde+hdf*20)
     left(90)
     down()
 
@@ -309,4 +309,8 @@ def etagere(taille,x,y,longueur=1,hauteurdesfondation=1,hauteurdunetage=1,nombre
     
     update()
 
-etagere(1,0,0,1.6,1,1,6,13,1)
+etagere(1,0,0,1,1,0.3,6,13,1)
+goto(0,0)
+stamp()
+input('')
+

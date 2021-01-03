@@ -1,33 +1,30 @@
 from turtle import *
 
-def quatredeux(taille,grosseur):
+def quatredeux(taille,grosseur,tortue):
 
     t=taille
-    tracer(0)
-    setheading(0)
-
-    width(grosseur)
-
-    left(90)
-    forward(2*t)
-    backward(t)
-    left(90)
-    forward(t)
-    right(90)
-    forward(t)
-    right(90)
-    up()
-    forward(t*2)
-    down()
-
+    tortue.tracer(0)
+    tortue.setheading(0)
+    tortue.width(grosseur)
+    tortue.left(90)
+    tortue.forward(2*t)
+    tortue.backward(t)
+    tortue.left(90)
+    tortue.forward(t)
+    tortue.right(90)
+    tortue.forward(t)
+    tortue.right(90)
+    tortue.up()
+    tortue.forward(t*2)
+    tortue.down()
     for i in range (2):
-        forward(t)
-        right(90)
-    forward(t)
-    left(90)
-    forward(t)
-    left(90)
-    forward(t)
+        tortue.forward(t)
+        tortue.right(90)
+    tortue.forward(t)
+    tortue.left(90)
+    tortue.forward(t)
+    tortue.left(90)
+    tortue.forward(t)
     
 
     update()

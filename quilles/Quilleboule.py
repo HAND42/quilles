@@ -1,7 +1,8 @@
 from setup import *
 def boule(taille,x,y,angle=0):
 
-    setup(x,y,angle)
+    tortueboule=Turtle(undobuffersize=0,visible=False,shape="square")
+    setup(x,y,angle,tortueboule)
 
     t=taille/7
 
@@ -9,32 +10,32 @@ def boule(taille,x,y,angle=0):
 
     #La boule noire
     up()
-    right(90)
-    backward(t*150)
-    right(90)
+    tortueboule.right(90)
+    tortueboule.backward(t*150)
+    tortueboule.right(90)
     
-    begin_fill()
-    circle(t*200,360)
-    end_fill()
+    tortueboule.begin_fill()
+    tortueboule.circle(t*200,360)
+    tortueboule.end_fill()
 
     #Le cercle blanc
-    left(90)
-    pencolor('blue')
-    forward(t*130)
-    right(90)
+    tortueboule.left(90)
+    tortueboule.pencolor('blue')
+    tortueboule.forward(t*130)
+    tortueboule.right(90)
 
-    fillcolor('white')
-    begin_fill()
-    circle(t*75,360)
-    end_fill()
+    tortueboule.fillcolor('white')
+    tortueboule.begin_fill()
+    tortueboule.circle(t*75,360)
+    tortueboule.end_fill()
 
     #Ecriture du 8
 
-    left(90)
-    forward(t*145)
-    right(90)
-    forward(t*30)
+    tortueboule.left(90)
+    tortueboule.forward(t*145)
+    tortueboule.right(90)
+    tortueboule.forward(t*30)
 
-    write('8', font=("Arial",int(90*t), "normal"))
+    tortueboule.write('8', font=("Arial",int(90*t), "normal"))
 
     update()
